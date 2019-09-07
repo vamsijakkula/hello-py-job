@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hello-py-job
+spec:
+  template:
+    metadata:
+      name: hello-py-job
+    spec:
+      containers:
+      - name: python-app
+        image: vamsijakkula/hello-py:latest
+      restartPolicy: Never
